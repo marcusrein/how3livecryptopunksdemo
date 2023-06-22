@@ -55,6 +55,8 @@ export function handleTransferPunk(call: TransferPunkCall): void {
 	let transfer = new CallData(id);
 	transfer.to = call.inputs.to;
 	transfer.punkIndex = call.inputs.punkIndex;
+
+	transfer.save();
 }
 
 export function handlePunkTransfer(event: PunkTransferEvent): void {
